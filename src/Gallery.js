@@ -21,13 +21,14 @@ class Gallery extends React.Component {
   componentWillUnmount() {
     this.observer.disconnect();
   }
-  handleClick = (event, { index }) => {
+  handleClick = (event, { index }, extra) => {
     const { photos, onClick } = this.props;
     onClick(event, {
       index,
       photo: photos[index],
       previous: photos[index - 1] || null,
       next: photos[index + 1] || null,
+      ...extra,
     });
   };
 

@@ -1,6 +1,6 @@
 # build
-lib
-dist
+# lib
+# dist
 example/dist
 
 # Logs
